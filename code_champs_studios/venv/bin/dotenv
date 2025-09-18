@@ -1,0 +1,16 @@
+#!/bin/sh
+'''exec' "/home/bigfish/Desktop/code champs studios/code_champs_studios/venv/bin/python" "$0" "$@"
+' '''
+import sys
+from dotenv.__main__ import cli
+if __name__ == '__main__':
+    if sys.argv[0].endswith('.exe'):
+        sys.argv[0] = sys.argv[0][:-4]
+    sys.exit(cli())
+SECRET_KEY=your-django-secret
+DEBUG=True
+DATABASE_URL=postgres://youruser:yourpass@localhost:5432/code_champs_db
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_PUBLISHABLE_KEY=pk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+PLATFORM_FEE_PERCENT=0.10   # platform takes 10% by default
